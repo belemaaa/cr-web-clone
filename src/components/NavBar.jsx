@@ -1,37 +1,36 @@
-import React from 'react'
-import logo from '../assets/proj/logo.png'
-import {SlSocialFacebook} from 'react-icons/si'
-import {FiTwitter} from 'react-icons/fi'
-import {BsInstagram} from 'react-icons/bs'
-import {FaBars} from 'react-icons/fa'
-import {FaTimes} from 'react-icons/fa'
+import React from 'react';
+import logo from '../assets/proj/logo.png';
+import {SlSocialFacebook} from 'react-icons/sl';
+import {FiTwitter} from 'react-icons/fi';
+import {BsInstagram} from 'react-icons/bs';
+import {FaBars, FaTimes} from 'react-icons/fa';
 
 const NavBar = () => {
 
     const navLinks = [
         {
             id: 1,
-            link: 'home'
+            link: 'HOME'
         },
         {
             id: 2,
-            link: 'menu'
+            link: 'MENU'
         },
         {
             id: 3,
-            link: 'promos'
+            link: 'PROMOS'
         },
         {
             id: 4,
-            link: 'store locator'
+            link: 'STORE LOCATOR'
         },
         {
             id: 5,
-            link: 'brand'
+            link: 'BRAND'
         },
         {
             id: 6,
-            link: 'news'
+            link: 'NEWS'
         },
     ]
     const socialLinks = [
@@ -66,27 +65,30 @@ const NavBar = () => {
 
     return (
         <div>
-            <div>
-                <div>
+            <div className='flex items-center justify-between  bg-white fixed w-full h-40 px-4'>
+                <div className='cursor-pointer'>
                     <img src={logo} alt='chicken republic logo' />
                 </div>
 
-                <ul>
+                <ul className='flex'>
                     {navLinks.map(({id, link}) => (
                         <li key={{id}}>
-                            <a
-                            href=''
-                            className=''
-                            >
+                            <a href='' className='px-5 cursor-pointer font-medium text-gray-500 hover:border-b pb-8 border-b-red-500'>
                                 {link}
                             </a>
                         </li>
                     ))}
                 </ul>
 
-                <div>
-                    <ul>
-
+                <div className='bg-red-500 rounded-3xl'>
+                    <ul className='flex items-center'>
+                        {socialLinks.map(({id, child}) => (
+                            <li key={id} className=' py-3 px-5'>
+                                <a href='' className='text-xl'>
+                                    {child}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
