@@ -8,72 +8,6 @@ import bannerIcon6 from '../assets/proj/bannerIcon6.png'
 import bannerIcon7 from '../assets/proj/bannerIcon7.png'
 
 const OrderNow = () => {
-    // const bannerLinks = [
-    //     {
-    //         id: 1,
-    //         child: (
-    //             <>
-    //                 <img className='w-20' src={bannerIcon1} />
-    //                 <p className='flex items-center justify-between'>Everyday Affordable <br/> Value Meals</p>
-    //             </>
-    //         )
-    //     },
-    //     {
-    //         id: 2,
-    //         child: (
-    //             <>
-    //                 <img className='w-20' src={bannerIcon2} />
-    //                 <p className='flex items-center justify-between'>Soulfully Spiced Fried <br/> Chicken</p>
-    //             </>
-    //         )
-    //     },
-    //     {
-    //         id: 3,
-    //         child: (
-    //             <>
-    //                 <img className='w-20' src={bannerIcon3} />
-    //                 <p className='flex items-center justify-between'>Delicious Rotisserie Chicken</p>
-    //             </>
-    //         )
-    //     },
-    //     {
-    //         id: 4,
-    //         child: (
-    //             <>
-    //                 <img className='w-20' src={bannerIcon4} />
-    //                 <p className='flex items-center justify-between'>Flame Grilled Chicken</p>
-    //             </>
-    //         )
-    //     },
-    //     {
-    //         id: 5,
-    //         child: (
-    //             <>
-    //                 <img className='w-20' src={bannerIcon5} />
-    //                 <p className='flex items-center justify-between'>Burger, Wraps & <br/> ChickWizz</p>
-    //             </>
-    //         )
-    //     },
-    //     {
-    //         id: 6,
-    //         child: (
-    //             <>
-    //                 <img className='w-20' src={bannerIcon6} />
-    //                 <p className='flex items-center justify-between'>Tasty Sides</p>
-    //             </>
-    //         )
-    //     },
-    //     {
-    //         id: 7,
-    //         child: (
-    //             <>
-    //                 <img className='w-20' src={bannerIcon7} />
-    //                 <p className='flex items-center justify-between'>Sweet Treats & <br/> Beverage!</p>
-    //             </>
-    //         )
-    //     },
-
-    // ]
     return (
         <div className='bg-red-600 flex flex-col items-center justify-between'>
             <div>
@@ -82,7 +16,7 @@ const OrderNow = () => {
             </div>
 
             <div>
-                <ul className='flex flex-row items-center justify-center text-center mb-6'>
+                <ul className='grid grid-cols-7 gap-1 items-center justify-center text-center mb-6'>
                     <li className='px-5'>
                         <a href="">
                             <img className='w-20 ml-6' src={bannerIcon1}/>
@@ -103,7 +37,7 @@ const OrderNow = () => {
                     </li>
                     <li className='px-5'>
                         <a href="">
-                            <img className='w-20 ml-8' src={bannerIcon4}/>
+                            <img className='w-20 ml-8 mt-0' src={bannerIcon4}/>
                             <p className='flex items-center justify-between text-xs text-white'>Flame Grilled Chicken</p>
                         </a>
                     </li>
@@ -121,7 +55,7 @@ const OrderNow = () => {
                     </li>
                     <li className='px-5'>
                         <a href="">
-                            <img className='w-20 ml-8' src={bannerIcon7}/>
+                            <img className='w-20 ml-1' src={bannerIcon7}/>
                             <p className='flex items-center justify-between text-xs text-white'>Sweet Treats & <br/> Beverage!</p>
                         </a>
                     </li>
