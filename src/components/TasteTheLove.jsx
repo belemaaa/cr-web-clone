@@ -13,15 +13,22 @@ const TasteTheLove = () => {
     const images = [slide1, slide2, slide3, slide4, slide5, slide6]
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+    // set functions to handle arrow clicks
     const goToNextImage = () => {
       setCurrentImageIndex((prevIndex) =>
         (prevIndex + 1) % images.length
       );
     };
     const goToPreviousImage = () => {
-        setCurrentImageIndex((prevIndex) =>
-            (prevIndex - 1) % images.length
-        )
+        setCurrentImageIndex((prevIndex) => {
+            if (prevIndex === 0) {
+                return images.length -1
+
+            }
+            else {
+                return prevIndex - 1;
+              }
+        })
     }
 
     return (
@@ -39,7 +46,7 @@ const TasteTheLove = () => {
                 </button>
 
                 <img
-                    className="w-3/4 mb-10 flex items-center justify-between"
+                    className="w-3/4 mb-10 flex items-center justify-between rounded-2xl shadow-2xl"
                     src={images[currentImageIndex]}
                     alt="Slideshow Image"
                 />
