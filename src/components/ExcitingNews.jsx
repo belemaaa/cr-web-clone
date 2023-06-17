@@ -10,14 +10,14 @@ import news5 from '../assets/proj/news5.png'
 const ExcitingNews = () => {
 
     const images=[
-        {id:1, image:{news1}},
-        {id:2, image:{news2}},
-        {id:3, image:{news3}},
-        {id:4, image:{news4}},
-        {id:5, image:{news5}},
+       news1,
+       news2,
+       news3,
+       news4,
+       news5
     ]
     const slicedImages = images.slice(0, 4)
-    
+
     const[currentImageIndex, setCurrentImageIndex] = useState(0)
 
     const goToNextImage = () =>{
@@ -41,9 +41,23 @@ const ExcitingNews = () => {
             <div className=''>
                 <p className='text-4xl text-red-700 font-bold my-6'>EXCITING NEWS</p>
             </div>
+            <div className='border w-3/4 border-yellow-600 border-y-2'></div>
 
-            <div>
-                
+            <div className=' flex-row items-center justify-center'>
+               <button
+                    className="flex justify-between"
+                    onClick={goToPreviousImage}
+                >
+                    <RiArrowLeftSLine size={40} className='text-red-500'/>
+                </button>
+                <ul className='grid grid-cols-4 mx-32 my-8'>
+                    {slicedImages.map(() => (
+                        <li className='mx-4'>
+                            <img src={images[currentImageIndex]} className='transition-all duration-300 
+                            ease-in-out filter brightness-100 hover:brightness-50 hover:scale-105'/>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     )
