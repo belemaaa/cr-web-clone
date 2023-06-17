@@ -29,7 +29,7 @@ const TasteTheLove = () => {
                 return prevIndex - 1;
             }
         })
-    }
+    };
 
     return (
         <div className='bg-yellow-500 flex flex-col items-center justify-between'>
