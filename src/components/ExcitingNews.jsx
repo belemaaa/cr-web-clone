@@ -43,20 +43,26 @@ const ExcitingNews = () => {
             </div>
             <div className='border w-3/4 border-yellow-600 border-y-2'></div>
 
-            <div className=' flex-row items-center justify-center'>
-               <button
-                    className="flex justify-between"
-                    onClick={goToPreviousImage}
-                >
-                    <RiArrowLeftSLine size={40} className='text-red-500'/>
-                </button>
-                <ul className='grid grid-cols-4 mx-32 my-8'>
+            <div className='w-full h-full flex-row items-center justify-center'>
+                <ul className='flex flex-row mx-20 my-8'>
+                    <button
+                        className="flex justify-between mt-16"
+                        onClick={goToPreviousImage}
+                    >
+                        <RiArrowLeftSLine size={40} className='text-red-500'/>
+                    </button>
                     {slicedImages.map(() => (
-                        <li className='mx-4'>
+                        <li className='mx-4 mb-10'>
                             <img src={images[currentImageIndex]} className='transition-all duration-300 
                             ease-in-out filter brightness-100 hover:brightness-50 hover:scale-105'/>
                         </li>
                     ))}
+                    <button
+                        className="flex justify-between mt-16"
+                        onClick={goToNextImage}
+                    >
+                        <MdOutlineKeyboardArrowRight size={40} className='text-red-500' />
+                    </button>
                 </ul>
             </div>
         </div>
