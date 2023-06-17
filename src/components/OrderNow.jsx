@@ -20,43 +20,43 @@ const OrderNow = () => {
                     <li className='px-5'>
                         <a href="">
                             <img className='w-20 ml-6' src={bannerIcon1}/>
-                            <p className='flex items-center justify-between text-xs text-white'>Everyday Affordable <br/> Value Meals</p>
+                            <p className='flex items-center justify-between text-xs text-white hover:text-yellow-400'>Everyday Affordable <br/> Value Meals</p>
                         </a>
                     </li>
                     <li className='px-5'>
                         <a href="">
                             <img className='w-20 ml-6' src={bannerIcon2}/>
-                            <p className='flex items-center justify-between text-xs text-white'>Soulfully Spiced Fried <br/> Chicken</p>
+                            <p className='flex items-center justify-between text-xs text-white hover:text-yellow-400'>Soulfully Spiced Fried <br/> Chicken</p>
                         </a>
                     </li>
                     <li className='px-5'>
                         <a href="">
-                            <img className='w-20 ml-8' src={bannerIcon3}/>
-                            <p className='flex items-center justify-between text-xs text-white'>Delicious Rotisserie <br/> Chicken</p>
+                            <img className='w-20 ml-4' src={bannerIcon3}/>
+                            <p className='flex items-center justify-between text-xs text-white hover:text-yellow-400'>Delicious Rotisserie <br/> Chicken</p>
                         </a>
                     </li>
                     <li className='px-5'>
                         <a href="">
                             <img className='w-20 ml-8 mt-0' src={bannerIcon4}/>
-                            <p className='flex items-center justify-between text-xs text-white'>Flame Grilled Chicken</p>
+                            <p className='flex items-center justify-between text-xs text-white hover:text-yellow-400'>Flame Grilled Chicken</p>
                         </a>
                     </li>
                     <li className='px-5'>
                         <a href="">
                             <img className='w-20 ml-2' src={bannerIcon5}/>
-                            <p className='flex items-center justify-between text-xs text-white'>Burger, Wraps & <br/> ChickWizz</p>
+                            <p className='flex items-center justify-between text-xs text-white hover:text-yellow-400'>Burger, Wraps & <br/> ChickWizz</p>
                         </a>
                     </li>
                     <li className='px-5'>
                         <a href="">
                             <img className='w-20' src={bannerIcon6}/>
-                            <p className='flex items-center justify-between text-xs text-white ml-2'>Tasty Sides</p>
+                            <p className='flex items-center justify-between text-xs text-white ml-2 hover:text-yellow-400'>Tasty Sides</p>
                         </a>
                     </li>
                     <li className='px-5'>
                         <a href="">
                             <img className='w-20 ml-1' src={bannerIcon7}/>
-                            <p className='flex items-center justify-between text-xs text-white'>Sweet Treats & <br/> Beverage!</p>
+                            <p className='flex items-center justify-between text-xs text-white hover:text-yellow-400'>Sweet Treats & <br/> Beverage!</p>
                         </a>
                     </li>
 
