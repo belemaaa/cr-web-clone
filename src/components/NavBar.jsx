@@ -92,7 +92,7 @@ const NavBar = () => {
                 </div>
 
                     {/* nav links */}
-                <ul className='hidden md:flex'>
+                <ul className='hidden lg:flex'>
                     {navLinks.map(({id, link}) => (
                         <li key={{id}}>
                             <a href='' className='px-5 cursor-pointer text-white font-bold hover:border-b-4 duration-200 pb-5 border-b-red-700'>

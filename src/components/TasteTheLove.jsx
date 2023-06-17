@@ -34,7 +34,7 @@ const TasteTheLove = () => {
     return (
         <div className='bg-yellow-500 flex flex-col items-center justify-between'>
             <div>
-                <p className='text-red-600 pt-10 pb-7 text-4xl font-bold'>TASTE THE LOVE - NEW MEAL DEALS</p>
+                <p className='text-red-600 pt-8 md:pt-10 pb-7 text-xl lg:text-4xl font-bold'>TASTE THE LOVE - NEW MEAL DEALS</p>
             </div>
 
             <div className="w-full h-full flex flex-row items-center justify-center">
