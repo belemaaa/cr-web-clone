@@ -10,14 +10,7 @@ import slide6 from '../assets/proj/slide6.jpg'
 
 const TasteTheLove = () => {
 
-    const images = [
-        {slide1},
-        {slide2},
-        {slide3},
-        {slide4},
-        {slide5},
-        {slide6}
-    ]
+    const images = [slide1, slide2, slide3, slide4, slide5, slide6]
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const goToNextImage = () => {
@@ -32,17 +25,25 @@ const TasteTheLove = () => {
                 <p className='text-red-600 py-10 text-4xl font-bold'>TASTE THE LOVE - NEW MEAL DEALS</p>
             </div>
 
-            <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-full flex flex-row items-center justify-center">
+                <button
+                    className="flex justify-between"
+                    onClick={goToNextImage}
+                >
+                    <RiArrowLeftSLine size={40} />
+                </button>
+
                 <img
-                    className="max-w-full max-h-full"
+                    className="w-1/2 mb-10 flex items-center justify-between"
                     src={images[currentImageIndex]}
                     alt="Slideshow Image"
                 />
+                
                 <button
-                    className="absolute top-1/2 right-2 transform -translate-y-1/2 px-4 py-2 bg-gray-900 text-white rounded"
+                    className="flex justify-between"
                     onClick={goToNextImage}
                 >
-                    <MdOutlineKeyboardArrowRight size={20} />
+                    <MdOutlineKeyboardArrowRight size={40} />
                 </button>
             </div>
         </div>
