@@ -27,7 +27,7 @@ const TasteTheLove = () => {
             }
             else {
                 return prevIndex - 1;
-              }
+            }
         })
     }
 

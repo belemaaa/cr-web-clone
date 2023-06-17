@@ -34,7 +34,7 @@ const NavBar = () => {
             id: 6,
             link: 'NEWS'
         },
-    ]
+    ];
     const socialLinks = [
         {
             id: 1,
@@ -42,8 +42,7 @@ const NavBar = () => {
                 <>
                     <FaFacebookSquare/>
                 </>
-            )
-            
+            )          
         },
         {
             id: 2,
@@ -51,8 +50,7 @@ const NavBar = () => {
                 <>
                     <BsTwitter/>
                 </>
-            )
-            
+            )     
         },
         {
             id: 3,
@@ -60,14 +58,30 @@ const NavBar = () => {
                 <>
                     <RiInstagramFill/>
                 </>
-            )
-            
+            )   
         },
-    ]
+    ];
+    // set scroll state to false
+    const [scrolling, setScrolling] = useState(false);
+
+    // handle header scroll effect
+    const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        if (scrollTop > 0){
+            setScrolling(true);
+        }
+        else {
+            setScrolling(false);
+        }
+    };
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <div>
-            <div className='flex items-center justify-between bg-black bg-opacity-25 fixed w-full md:h-32 px-4'>
+            <div className='flex items-center justify-between scroll:bg-gray-500 bg-black bg-opacity-25 fixed w-full md:h-32 px-4'>
                 <div className='cursor-pointer ml-2 md:ml-12'>
                     <img src={logo} alt='chicken republic logo' className="h-12 md:h-32 md:w-36 md:ml-16" />
                 </div>
