@@ -6,8 +6,8 @@ const Home = () => {
     <div className=''>
         <img src={homePageBanner} className='top-20 md:top-0' />
 
-        <div className="absolute top-52 left-60 transform -translate-x-1/2 -translate-y-1/2 text-white p-4">
-          <p className="text-2xl font-semibold px-4">ENJOY OUR <br/>SOULFULLY SPICED <br/>CHICKEN MEALS</p>
+        <div className="absolute top-52 left-60 transform -translate-x-1/2 -translate-y-1/2 text-white pt-6">
+          <p className="text-3xl font-thin">Enjoy Our Soulfully <br/>Spiced Chicken Meals</p>
         </div>
     </div>
   )
