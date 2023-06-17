@@ -69,7 +69,7 @@ const NavBar = () => {
         <div>
             <div className='flex items-center justify-between bg-black bg-opacity-25 fixed w-full md:h-32 px-4'>
                 <div className='cursor-pointer ml-2 md:ml-12'>
-                    <img src={logo} alt='chicken republic logo' className="md:h-32 md:w-36 md:ml-16" />
+                    <img src={logo} alt='chicken republic logo' className="h-12 md:h-32 md:w-36 md:ml-16" />
                 </div>
 
                     {/* nav links */}
@@ -84,11 +84,11 @@ const NavBar = () => {
                 </ul>
 
                     {/* social links */}
-                <div className='px-16 md:px-5'>
+                <div className='pr-5 md:px-5'>
                     <ul className='flex items-center'>
                         {socialLinks.map(({id, child}) => (
-                            <li key={id} className=' py-3 px-5'>
-                                <a href='' className='text-xl text-red-700'>
+                            <li key={id} className=' py-3 px-5 mb-4 border-b border-b-yellow-500'>
+                                <a href='' className='text-2xl text-white hover:text-red-700'>
                                     {child}
                                 </a>
                             </li>
