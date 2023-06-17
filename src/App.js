@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import OrderNow from './components/OrderNow';
 import TasteTheLove from './components/TasteTheLove';
+import ExcitingNews from './components/ExcitingNews';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Home/>
       <OrderNow/>
       <TasteTheLove/>
+      <ExcitingNews/>
     </div>
   );
 }
