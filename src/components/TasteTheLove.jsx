@@ -18,32 +18,37 @@ const TasteTheLove = () => {
         (prevIndex + 1) % images.length
       );
     };
+    const goToPreviousImage = () => {
+        setCurrentImageIndex((prevIndex) =>
+            (prevIndex - 1) % images.length
+        )
+    }
 
     return (
         <div className='bg-yellow-500 flex flex-col items-center justify-between'>
             <div>
-                <p className='text-red-600 py-10 text-4xl font-bold'>TASTE THE LOVE - NEW MEAL DEALS</p>
+                <p className='text-red-600 pt-10 pb-7 text-4xl font-bold'>TASTE THE LOVE - NEW MEAL DEALS</p>
             </div>
 
             <div className="w-full h-full flex flex-row items-center justify-center">
                 <button
                     className="flex justify-between"
-                    onClick={goToNextImage}
+                    onClick={goToPreviousImage}
                 >
-                    <RiArrowLeftSLine size={40} />
+                    <RiArrowLeftSLine size={40} className='text-red-500'/>
                 </button>
 
                 <img
-                    className="w-1/2 mb-10 flex items-center justify-between"
+                    className="w-3/4 mb-10 flex items-center justify-between"
                     src={images[currentImageIndex]}
                     alt="Slideshow Image"
                 />
-                
+
                 <button
                     className="flex justify-between"
                     onClick={goToNextImage}
                 >
-                    <MdOutlineKeyboardArrowRight size={40} />
+                    <MdOutlineKeyboardArrowRight size={40} className='text-red-500' />
                 </button>
             </div>
         </div>
