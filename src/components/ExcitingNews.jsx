@@ -9,32 +9,54 @@ import news5 from '../assets/proj/news5.png'
 
 const ExcitingNews = () => {
 
-    const images=[
-       news1,
-       news2,
-       news3,
-       news4,
-       news5
-    ]
-    const slicedImages = images.slice(0, 4)
-
     const[currentImageIndex, setCurrentImageIndex] = useState(0)
 
+    // set array for medium screen images
+    const mdImages=[
+       {currentImageIndex: 1,  image:news1},
+       {currentImageIndex: 2,  image:news2},
+       {currentImageIndex: 3,  image:news3},
+       {currentImageIndex: 4,  image:news4},
+       {currentImageIndex: 5,  image:news5}
+    ]
+    const slicedImages = mdImages.slice(0, 4)
+
+    // set array for small screen images
+    const smImages = [news1, news2, news3, news4, news5]
+
+    // set arrow effects for small screens
     const goToNextImage = () =>{
         setCurrentImageIndex((prevIndex) =>
-            (prevIndex + 1) % images.length
+            (prevIndex + 1) % smImages.length
         )
     };
     const goToPreviousImage = () =>{
         setCurrentImageIndex((prevIndex) => {
             if(prevIndex === 0){
-                return images.length - 1
+                return smImages.length - 1
             }
             else {
                 return prevIndex - 1 
             }
         })
     };
+
+    // set arrow effects for md and lg screens
+    const nextImage = () =>{
+        setCurrentImageIndex((news4) =>
+            (news4[currentImageIndex] + 1) % mdImages.length
+        )
+    }
+    const previousImage = () =>{
+        setCurrentImageIndex((prevIndex) => {
+            if(prevIndex === 0){
+                return mdImages.length - 1
+            }
+            else {
+                return prevIndex - 1 
+            }
+        })
+    }
 
     return (
         <div className='flex flex-col items-center justify-between bg-white'>
@@ -44,18 +66,18 @@ const ExcitingNews = () => {
             <div className='border w-3/4 border-yellow-600 border-y-2'></div>
 
             <div className='w-full h-full flex-row items-center justify-center'>
-                <ul className='flex flex-row mx-3 md:mx-20 my-8'>
+                <ul className='flex flex-row items-center justify-center md:mx-20 my-8'>
                     <button
-                        className="flex justify-between mt-24 md:mt-16"
+                        className="flex justify-between mb-10"
                         onClick={goToPreviousImage}
                     >
-                        <RiArrowLeftSLine size={40} className='text-red-500 bg-black bg-opacity-20 item-center py-1 mr-2'/>
+                        <RiArrowLeftSLine size={40} className='text-red-500'/>
                     </button>
 
                     {/* set image set - for md screens */}
-                    {slicedImages.map(() => (
-                        <li className='hidden md:flex mx-4 mb-10'>
-                            <img src={images[currentImageIndex]} className='transition-all duration-300 
+                    {slicedImages.map(({currentImageIndex, image}) => (
+                        <li key={currentImageIndex} className='hidden md:flex mx-4 mb-10'>
+                            <img src={image} className='transition-all duration-300 
                             ease-in-out filter brightness-100 hover:brightness-50 hover:scale-105'/>
                         </li>
                     ))}
@@ -63,15 +85,15 @@ const ExcitingNews = () => {
                     {/* set image set for sm screens */}
                     <img
                         className="md:hidden sm:flex w-72 mb-5 flex items-center justify-center transition-all duration-300 
-                        ease-in-out filter brightness-100 hover:brightness-50 hover:scale-105"
-                        src={images[currentImageIndex]}
+                        ease-in-out filter brightness-100 hover:brightness-50 hover:scale-105 shadow-xl"
+                        src={smImages[currentImageIndex]}
                         alt="Slideshow Image"
                     />    
                     <button
-                        className="flex justify-between mt-24 md:mt-16"
+                        className="flex justify-between mb-10"
                         onClick={goToNextImage}
                     >
-                        <MdOutlineKeyboardArrowRight size={40} className='text-red-500 bg-black bg-opacity-20 item-center py-1 ml-2' />
+                        <MdOutlineKeyboardArrowRight size={40} className='text-red-500' />
                     </button>
                 </ul>
 
