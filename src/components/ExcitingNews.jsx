@@ -39,7 +39,7 @@ const ExcitingNews = () => {
     return (
         <div className='flex flex-col items-center justify-between bg-white'>
             <div className=''>
-                <p className='text-4xl text-red-700 font-bold my-6'>EXCITING NEWS</p>
+                <p className='text-2xl md:text-4xl text-red-700 font-bold my-6'>EXCITING NEWS</p>
             </div>
             <div className='border w-3/4 border-yellow-600 border-y-2'></div>
 

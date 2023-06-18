@@ -86,7 +86,7 @@ const NavBar = () => {
 
     return (
         <div>
-            <div className={"flex items-center justify-between scroll:bg-gray-500 bg-black bg-opacity-25 fixed w-full md:h-32 px-4 transition-all"}>
+            <div className={"flex items-center justify-between scroll:bg-gray-500 bg-black bg-opacity-25 fixed w-screen md:w-full md:h-32 px-4 transition-all"}>
                 <div className='cursor-pointer ml-2 md:ml-12'>
                     <img src={logo} alt='chicken republic logo' className="h-12 md:h-32 md:w-36 md:ml-16" />
                 </div>
