@@ -22,7 +22,7 @@ const ExcitingNews = () => {
 
     const goToNextImage = () =>{
         setCurrentImageIndex((prevIndex) =>
-            prevIndex + 5 % images.length
+            (prevIndex + 1) % images.length
         )
     };
     const goToPreviousImage = () =>{
@@ -49,7 +49,7 @@ const ExcitingNews = () => {
                         className="flex justify-between mt-24 md:mt-16"
                         onClick={goToPreviousImage}
                     >
-                        <RiArrowLeftSLine size={40} className='text-red-500'/>
+                        <RiArrowLeftSLine size={40} className='text-red-500 bg-black bg-opacity-20 item-center py-1 mr-2'/>
                     </button>
 
                     {/* set image set - for md screens */}
@@ -62,7 +62,7 @@ const ExcitingNews = () => {
 
                     {/* set image set for sm screens */}
                     <img
-                        className="md:hidden sm:flex w-80 mb-5 flex items-center justify-center transition-all duration-300 
+                        className="md:hidden sm:flex w-72 mb-5 flex items-center justify-center transition-all duration-300 
                         ease-in-out filter brightness-100 hover:brightness-50 hover:scale-105"
                         src={images[currentImageIndex]}
                         alt="Slideshow Image"
@@ -71,7 +71,7 @@ const ExcitingNews = () => {
                         className="flex justify-between mt-24 md:mt-16"
                         onClick={goToNextImage}
                     >
-                        <MdOutlineKeyboardArrowRight size={40} className='text-red-500' />
+                        <MdOutlineKeyboardArrowRight size={40} className='text-red-500 bg-black bg-opacity-20 item-center py-1 ml-2' />
                     </button>
                 </ul>
 
