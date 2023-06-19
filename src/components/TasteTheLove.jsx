@@ -32,21 +32,21 @@ const TasteTheLove = (props) => {
     };
 
     return (
-        <div className='bg-yellow-500 flex flex-col items-center justify-between'>
+        <div className={'flex flex-col items-center justify-between' + " " + props.bgColor}>
             <div>
-                <p className='text-red-600 pt-8 md:pt-10 pb-7 text-xl lg:text-4xl font-bold'>{props.title}</p>
+                <p className={'pt-8 md:pt-10 pb-3 md:pb-7 text-xl lg:text-4xl font-bold' + " " + props.titleColor}>{props.title}</p>
             </div>
 
-            <div className="w-full h-full flex flex-row items-center justify-center">
+            <div className="sm:w-full h-full flex flex-row items-center justify-center md:mx-12">
                 <button
                     className="flex justify-between"
                     onClick={goToPreviousImage}
                 >
-                    <RiArrowLeftSLine size={40} className='text-red-500'/>
+                    <RiArrowLeftSLine size={40} className={'' + " " + props.leftArrow}/>
                 </button>
 
                 <img
-                    className="w-3/4 mb-10 flex items-center justify-between rounded-2xl shadow-2xl"
+                    className="w-80 md:w-3/4 mb-5 md:mb-10 flex items-center justify-between rounded-2xl shadow-2xl"
                     src={images[currentImageIndex]}
                     alt="Slideshow Image"
                 />
@@ -55,7 +55,7 @@ const TasteTheLove = (props) => {
                     className="flex justify-between"
                     onClick={goToNextImage}
                 >
-                    <MdOutlineKeyboardArrowRight size={40} className='text-red-500' />
+                    <MdOutlineKeyboardArrowRight size={40} className={'' + " " + props.rightArrow} />
                 </button>
             </div>
         </div>

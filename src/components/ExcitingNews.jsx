@@ -84,7 +84,7 @@ const ExcitingNews = () => {
 
                     {/* set image set for sm screens */}
                     <img
-                        className="md:hidden sm:flex w-72 mb-5 flex items-center justify-center transition-all duration-300 
+                        className="md:hidden sm:flex w-80 mb-2 flex items-center justify-center transition-all duration-300 
                         ease-in-out filter brightness-100 hover:brightness-50 hover:scale-105 shadow-xl"
                         src={smImages[currentImageIndex]}
                         alt="Slideshow Image"

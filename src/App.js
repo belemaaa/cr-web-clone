@@ -24,13 +24,21 @@ function App() {
       <Home/>
       <OrderNow/>
       <TasteTheLove 
+        titleColor='text-red-600'
+        bgColor='bg-yellow-500'
         title='TASTE THE LOVE - NEW MEAL DEALS'
         const images = {[slide1, slide2, slide3, slide4, slide5, slide6]}
+        rightArrow='text-red-500'
+        leftArrow='text-red-500'
       />
       <ExcitingNews/>
       <TasteTheLove
+        titleColor='text-white'
+        bgColor='bg-red-600'
         title='EVERYDAY AFFORDABLE VALUE MEALS'
         const images = {[everyday1, everyday2, everyday3, everyday4, everyday5]}
+        rightArrow='text-white'
+        leftArrow='text-white'
       />
     </div>
   );
