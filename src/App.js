@@ -16,6 +16,7 @@ import Home from './components/Home';
 import OrderNow from './components/OrderNow';
 import TasteTheLove from './components/TasteTheLove';
 import ExcitingNews from './components/ExcitingNews';
+import OurPeople from './components/OurPeople';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         rightArrow='text-white'
         leftArrow='text-white'
       />
+      <OurPeople/>
     </div>
   );
 }
