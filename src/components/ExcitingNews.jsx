@@ -61,7 +61,7 @@ const ExcitingNews = () => {
     return (
         <div className='flex flex-col items-center justify-between bg-white'>
             <div className=''>
-                <p className='text-3xl md:text-4xl text-red-700 font-bold mt-5 mb-4 md:my-6'>EXCITING NEWS</p>
+                <p className='text-3xl md:text-4xl text-red-700 font-bold mt-3 mb-2 md:my-6'>EXCITING NEWS</p>
             </div>
             <div className='border w-3/4 border-yellow-600 border-y-2'></div>
 
@@ -84,8 +84,7 @@ const ExcitingNews = () => {
 
                     {/* set image set for sm screens */}
                     <img
-                        className="md:hidden sm:flex w-80 mb-2 flex items-center justify-center transition-all duration-300 
-                        ease-in-out filter brightness-100 hover:brightness-50 hover:scale-105 shadow-xl"
+                        className="md:hidden sm:flex w-80 mt-[-4] mb-0 flex items-center justify-center shadow-xl"
                         src={smImages[currentImageIndex]}
                         alt="Slideshow Image"
                     />    
