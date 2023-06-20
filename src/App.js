@@ -18,6 +18,7 @@ import TasteTheLove from './components/TasteTheLove';
 import ExcitingNews from './components/ExcitingNews';
 import OurPeople from './components/OurPeople';
 import Find from './components/Find';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
       />
       <OurPeople/>
       <Find/>
+      <Footer/>
     </div>
   );
 }
