@@ -13,7 +13,7 @@ const OurPeople = () => {
                 <p className='sm:flex sm:items-center sm:justify-between mt-3 md:mt-0 text-red-600 text-2xl md:inline-block 
                 text-center border-b-2 border-b-gray-500 mb-4'>OUR PEOPLE</p>
             </div>
-            <p className='pt-2 block max-w-xs mx-auto text-justify md:mx-0 md:max-w-lg text-gray-500'>
+            <p className='pt-0 md:pt-2 block text-sm max-w-xs mx-auto text-justify md:mx-0 md:max-w-lg text-gray-500'>
             Behind every delicious, Soulfully Spiced Chicken meal and at the forefront 
             of every great customer experience stands a passionate and committed person. 
             This is why “People Capability Always” is a driving force within our business 

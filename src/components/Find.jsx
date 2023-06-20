@@ -1,5 +1,6 @@
 import React from 'react'
 import crBuilding from '../assets/proj/cr-building.jpeg'
+import {RxDotFilled} from 'react-icons/rx'
 
 const Find = () => {
   return (
@@ -15,12 +16,12 @@ const Find = () => {
 
         {/* sm screens */}
         <div className='md:hidden sm:flex mt-4 mb-2'>
-          <img src={crBuilding} className='w-full h-60' />
+          <img src={crBuilding} className='w-96 h-60' />
         </div>
         <div className='md:hidden sm:flex mx-auto text-justify mb-4'>
-           <p className='pb-1 text-red-700 font-bold text-xl'>Find your Closest Restaurant</p>
-           <p className='text-white text-xl border border-red-600 rounded-xl px-3 py-1'>
-            Become a Chicken Republic <br/><span className='flex items-center justify-center'>Franchisee</span></p>
+           <p className='pb-1 text-red-700 font-bold text-lg text-center'>Find your Closest Restaurant</p>
+           <p className='text-white text-xm flex flex-row'>
+            <RxDotFilled className='flex justify-between'/>Become a Chicken Republic Franchisee<RxDotFilled/> </p>
         </div>
     </div>
   )
