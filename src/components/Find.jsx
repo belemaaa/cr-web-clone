@@ -16,7 +16,7 @@ const Find = () => {
 
         {/* sm screens */}
         <div className='md:hidden sm:flex mt-4 mb-2'>
-          <img src={crBuilding} className='w-96 h-60' />
+          <img src={crBuilding} className='w-80 h-60' />
         </div>
         <div className='md:hidden sm:flex mx-auto text-justify mb-4'>
            <p className='pb-1 text-red-700 font-bold text-lg text-center'>Find your Closest Restaurant</p>

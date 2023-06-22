@@ -62,26 +62,10 @@ const NavBar = () => {
         },
     ];
 
-    // set scroll state to false
-    const [scrolling, setScrolling] = useState(false);
-
-    // handle header scroll effect
-    const handleScroll = () => {
-        const scrollTop = window.scrollY;
-        if (scrollTop > 0){
-            setScrolling(true);
-        }
-        else {
-            setScrolling(false);
-        }
+    const [onHover, setOnHover] = useState(false)
+    const toggleDropdown = () =>{
+        setOnHover(!onHover);
     };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        };
-    }, []);
 
 
     return (
@@ -93,14 +77,22 @@ const NavBar = () => {
 
                     {/* nav links */}
                 <ul className='hidden lg:flex'>
-                    {navLinks.map(({id, link}) => (
-                        <li key={{id}}>
-                            <a href='' className='px-5 cursor-pointer text-white font-bold hover:border-b-4 duration-200 pb-5 border-b-red-700'>
-                                {link}
+                    <div>
+                        <li>
+                            <a
+                            href='' className='px-5 cursor-pointer text-white font-bold hover:border-b-4 duration-200 pb-5 border-b-red-700'
+                            onMouseEnter={toggleDropdown}
+                            onMouseLeave={toggleDropdown}
+                            >
+                                HOME                    
                             </a>
-                        </li>
-                    ))}
+                        </li> 
+                        {onHover && (
+                            
+                        )} 
+                    </div>              
                 </ul>
+                
 
                     {/* social links */}
                 <div className='pr-5 md:px-5'>

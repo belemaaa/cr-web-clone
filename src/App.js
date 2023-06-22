@@ -19,6 +19,7 @@ import ExcitingNews from './components/ExcitingNews';
 import OurPeople from './components/OurPeople';
 import Find from './components/Find';
 import Footer from './components/Footer';
+import HoverTest from './components/HoverTest';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
       <OurPeople/>
       <Find/>
       <Footer/>
+      <HoverTest/>
     </div>
   );
 }
