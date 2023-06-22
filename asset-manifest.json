@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cr-web-clone/static/css/main.4432d134.css",
-    "main.js": "/cr-web-clone/static/js/main.28562f15.js",
+    "main.css": "/cr-web-clone/static/css/main.cedc9c95.css",
+    "main.js": "/cr-web-clone/static/js/main.9405d79d.js",
     "static/js/787.ac34fb11.chunk.js": "/cr-web-clone/static/js/787.ac34fb11.chunk.js",
     "static/media/slide1.jpg": "/cr-web-clone/static/media/slide1.dea975716333127ceea3.jpg",
     "static/media/slide6.jpg": "/cr-web-clone/static/media/slide6.d6c0c5e79dba83006b64.jpg",
@@ -24,12 +24,12 @@
     "static/media/cr-building.jpeg": "/cr-web-clone/static/media/cr-building.c17b72fc17d802072eb2.jpeg",
     "static/media/logo.svg": "/cr-web-clone/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/cr-web-clone/index.html",
-    "main.4432d134.css.map": "/cr-web-clone/static/css/main.4432d134.css.map",
-    "main.28562f15.js.map": "/cr-web-clone/static/js/main.28562f15.js.map",
+    "main.cedc9c95.css.map": "/cr-web-clone/static/css/main.cedc9c95.css.map",
+    "main.9405d79d.js.map": "/cr-web-clone/static/js/main.9405d79d.js.map",
     "787.ac34fb11.chunk.js.map": "/cr-web-clone/static/js/787.ac34fb11.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4432d134.css",
-    "static/js/main.28562f15.js"
+    "static/css/main.cedc9c95.css",
+    "static/js/main.9405d79d.js"
   ]
 }
