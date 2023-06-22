@@ -9,6 +9,32 @@ const NavBar = () => {
 
     const [nav, setNav] = useState(false);
 
+    const navLinks = [
+        {
+            id: 1,
+            link: 'HOME'
+        },
+        {
+            id: 2,
+            link: 'MENU'
+        },
+        {
+            id: 3,
+            link: 'PROMOS'
+        },
+        {
+            id: 4,
+            link: 'STORE LOCATOR'
+        },
+        {
+            id: 5,
+            link: 'BRAND'
+        },
+        {
+            id: 6,
+            link: 'NEWS'
+        },
+    ];
     const socialLinks = [
         {
             id: 1,
@@ -39,36 +65,23 @@ const NavBar = () => {
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
     const [isOpen3, setIsOpen3] = useState(false);
-    const [isOpen4, setIsOpen4] = useState(false);
-    const [isOpen5, setIsOpen5] = useState(false);
-    const [isOpen6, setIsOpen6] = useState(false);
 
     const openDropdown1 = () => {
         setIsOpen1(true);
         setIsOpen2(false)
         setIsOpen3(false)
-        setIsOpen4(false)
       };
 
     const openDropdown2 = () => {
         setIsOpen1(false);
         setIsOpen2(true)
         setIsOpen3(false)
-        setIsOpen4(false)
     } 
     
     const openDropdown3 = () => {
         setIsOpen1(false);
         setIsOpen2(false)
         setIsOpen3(true)
-        setIsOpen4(false)
-    }
-
-    const openDropdown4 = () => {
-        setIsOpen1(false);
-        setIsOpen2(false)
-        setIsOpen3(false)
-        setIsOpen4(true)
     }
 
     const closeDropdown = () =>{
@@ -76,7 +89,6 @@ const NavBar = () => {
             setIsOpen1(false);
             setIsOpen2(false)
             setIsOpen3(false)
-            setIsOpen4(false)
         }, 1000)
     }
      
@@ -101,10 +113,67 @@ const NavBar = () => {
                     <a
                         href="#"
                         className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
-                        onMouseEnter={openDropdown2}
+                        onMouseEnter={openDropdown1}
                         onMouseLeave={closeDropdown}
                     >
                         MENU
+                    </a>
+                    {isOpen1 && (
+                        <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Everyday Affordable Value Meals
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Fried Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Flamed Grilled Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Rotisserie Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Burger, Wraps & ChickWizz
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Tasty Sides
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Sweets, Treats and Beverages
+                            </a>
+                        </div>
+                    )}
+                </div>
+
+                <div className='mt-6 px-5'>
+                    <a
+                        href="#"
+                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
+                        onMouseEnter={openDropdown2}
+                        onMouseLeave={closeDropdown}
+                    >
+                        PROMOS
                     </a>
                     {isOpen2 && (
                         <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
@@ -158,10 +227,19 @@ const NavBar = () => {
                     <a
                         href="#"
                         className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
+                    >
+                        STORE LOCATOR
+                    </a>
+                </div>
+
+                <div className='mt-6 px-5'>
+                    <a
+                        href="#"
+                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
                         onMouseEnter={openDropdown3}
                         onMouseLeave={closeDropdown}
                     >
-                        PROMOS
+                        BRAND
                     </a>
                     {isOpen3 && (
                         <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
@@ -215,125 +293,9 @@ const NavBar = () => {
                     <a
                         href="#"
                         className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
-                        onMouseEnter={openDropdown4}
-                        onMouseLeave={closeDropdown}
-                    >
-                        STORE LOCATOR
-                    </a>
-                </div>
-
-                <div className='mt-6 px-5'>
-                    <a
-                        href="#"
-                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
-                        onMouseEnter={openDropdown5}
-                        onMouseLeave={closeDropdown}
-                    >
-                        BRAND
-                    </a>
-                    {isOpen5 && (
-                        <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Everyday Affordable Value Meals
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Fried Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Flamed Grilled Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Rotisserie Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Burger, Wraps & ChickWizz
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Tasty Sides
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Sweets, Treats and Beverages
-                            </a>
-                        </div>
-                    )}
-                </div>
-
-                <div className='mt-6 px-5'>
-                    <a
-                        href="#"
-                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
-                        onMouseEnter={openDropdown6}
-                        onMouseLeave={closeDropdown}
                     >
                         NEWS
                     </a>
-                    {isOpen6 && (
-                        <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Everyday Affordable Value Meals
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Fried Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Flamed Grilled Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Rotisserie Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Burger, Wraps & ChickWizz
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Tasty Sides
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Sweets, Treats and Beverages
-                            </a>
-                        </div>
-                    )}
                 </div>         
             </div>
 
