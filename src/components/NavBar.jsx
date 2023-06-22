@@ -9,32 +9,6 @@ const NavBar = () => {
 
     const [nav, setNav] = useState(false);
 
-    const navLinks = [
-        {
-            id: 1,
-            link: 'HOME'
-        },
-        {
-            id: 2,
-            link: 'MENU'
-        },
-        {
-            id: 3,
-            link: 'PROMOS'
-        },
-        {
-            id: 4,
-            link: 'STORE LOCATOR'
-        },
-        {
-            id: 5,
-            link: 'BRAND'
-        },
-        {
-            id: 6,
-            link: 'NEWS'
-        },
-    ];
     const socialLinks = [
         {
             id: 1,
@@ -62,12 +36,50 @@ const NavBar = () => {
         },
     ];
 
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggleDropdown = () => {
-      setIsOpen(!isOpen);
-    };
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(false);
+    const [isOpen4, setIsOpen4] = useState(false);
+    const [isOpen5, setIsOpen5] = useState(false);
+    const [isOpen6, setIsOpen6] = useState(false);
 
+    const openDropdown1 = () => {
+        setIsOpen1(true);
+        setIsOpen2(false)
+        setIsOpen3(false)
+        setIsOpen4(false)
+      };
+
+    const openDropdown2 = () => {
+        setIsOpen1(false);
+        setIsOpen2(true)
+        setIsOpen3(false)
+        setIsOpen4(false)
+    } 
+    
+    const openDropdown3 = () => {
+        setIsOpen1(false);
+        setIsOpen2(false)
+        setIsOpen3(true)
+        setIsOpen4(false)
+    }
+
+    const openDropdown4 = () => {
+        setIsOpen1(false);
+        setIsOpen2(false)
+        setIsOpen3(false)
+        setIsOpen4(true)
+    }
+
+    const closeDropdown = () =>{
+        setTimeout(() => {
+            setIsOpen1(false);
+            setIsOpen2(false)
+            setIsOpen3(false)
+            setIsOpen4(false)
+        }, 1000)
+    }
+     
 
     return (
         <div className={"flex items-center justify-between scroll:bg-gray-500 bg-black bg-opacity-25 fixed w-screen md:w-full md:h-32 px-4 transition-all"}>
@@ -76,16 +88,25 @@ const NavBar = () => {
             </div>
 
             <div className="hidden lg:flex">
-                <div className='mt-6'>
-                    <span
+                <div className='mt-6 px-5'>
+                    <a
+                        href="#"
                         className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
-                        onMouseEnter={toggleDropdown}
-                        onMouseLeave={toggleDropdown}
+                    >
+                        HOME
+                    </a>
+                </div>
 
+                <div className='mt-6 px-5'>
+                    <a
+                        href="#"
+                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
+                        onMouseEnter={openDropdown2}
+                        onMouseLeave={closeDropdown}
                     >
                         MENU
-                    </span>
-                    {isOpen && (
+                    </a>
+                    {isOpen2 && (
                         <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
                             <a
                                 href="#"
@@ -132,50 +153,189 @@ const NavBar = () => {
                         </div>
                     )}
                 </div>
-            
-            </div>
 
-                {/* nav links */}
-            {/* <div className='hidden lg:flex'>
-                <div>
-                    <div>
-                        <a
-                        href='' className='px-5 cursor-pointer text-white font-bold hover:border-b-4 duration-200 pb-5 border-b-red-700'
-                        >
-                            HOME                    
-                        </a>
-                    </div>  
-                </div> 
-
-                <div>
-                    <span
-                        className="px-5 cursor-pointer text-white font-bold duration-200 pb-5 border-b-red-700"
-                        onMouseEnter={toggleDropdown}
-                        onMouseLeave={toggleDropdown}
-
+                <div className='mt-6 px-5'>
+                    <a
+                        href="#"
+                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
+                        onMouseEnter={openDropdown3}
+                        onMouseLeave={closeDropdown}
                     >
-                    MENU
-                    </span>    
-                    {onHover && (
-                        <div className="absolute bg-white mt-2 py-2 w-48 rounded-lg shadow-lg">
-                            <a 
-                            href="#"
-                            className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white">
-                                Everyday Affordable Value Meals
-                            </a>
-
+                        PROMOS
+                    </a>
+                    {isOpen3 && (
+                        <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
                             <a
-                            href="#"
-                            className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
                             >
                                 Everyday Affordable Value Meals
                             </a>
-                            
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Fried Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Flamed Grilled Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Rotisserie Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Burger, Wraps & ChickWizz
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Tasty Sides
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Sweets, Treats and Beverages
+                            </a>
                         </div>
-                    )} 
-                </div>              
-            </div> */}
-            
+                    )}
+                </div>
+
+                <div className='mt-6 px-5'>
+                    <a
+                        href="#"
+                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
+                        onMouseEnter={openDropdown4}
+                        onMouseLeave={closeDropdown}
+                    >
+                        STORE LOCATOR
+                    </a>
+                </div>
+
+                <div className='mt-6 px-5'>
+                    <a
+                        href="#"
+                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
+                        onMouseEnter={openDropdown5}
+                        onMouseLeave={closeDropdown}
+                    >
+                        BRAND
+                    </a>
+                    {isOpen5 && (
+                        <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Everyday Affordable Value Meals
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Fried Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Flamed Grilled Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Rotisserie Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Burger, Wraps & ChickWizz
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Tasty Sides
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Sweets, Treats and Beverages
+                            </a>
+                        </div>
+                    )}
+                </div>
+
+                <div className='mt-6 px-5'>
+                    <a
+                        href="#"
+                        className="text-white font-bold cursor-pointer hover:border-b-4 duration-200 pb-5 border-b-red-700"
+                        onMouseEnter={openDropdown6}
+                        onMouseLeave={closeDropdown}
+                    >
+                        NEWS
+                    </a>
+                    {isOpen6 && (
+                        <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Everyday Affordable Value Meals
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Fried Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Flamed Grilled Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Rotisserie Chicken
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Burger, Wraps & ChickWizz
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Tasty Sides
+                            </a>
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                            >
+                                Sweets, Treats and Beverages
+                            </a>
+                        </div>
+                    )}
+                </div>         
+            </div>
 
                 {/* social links */}
             <div className='pr-5 md:px-5'>
