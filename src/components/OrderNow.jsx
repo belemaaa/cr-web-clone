@@ -63,7 +63,7 @@ const OrderNow = () => {
                         <a href="">
                             <img className='w-20 ml-1' src={bannerIcon7}/>
                             <p className='flex items-center justify-between text-xs text-white hover:text-yellow-400'>
-                                Sweet Treats & <br/> Beverage!</p>
+                                Sweet Treats & <br/> Beverages</p>
                         </a>
                     </li>
 
