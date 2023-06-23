@@ -89,7 +89,7 @@ const NavBar = () => {
             setIsOpen1(false);
             setIsOpen2(false)
             setIsOpen3(false)
-        }, 1000)
+        }, 2000)
     }
      
 
@@ -122,43 +122,43 @@ const NavBar = () => {
                         <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
                                 Everyday Affordable Value Meals
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
                                 Fried Chicken
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
                                 Flamed Grilled Chicken
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
                                 Rotisserie Chicken
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
                                 Burger, Wraps & ChickWizz
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
                                 Tasty Sides
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
                                 Sweets, Treats and Beverages
                             </a>
@@ -179,45 +179,15 @@ const NavBar = () => {
                         <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
-                                Everyday Affordable Value Meals
+                                Special Promo Meals
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
-                                Fried Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Flamed Grilled Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Rotisserie Chicken
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Burger, Wraps & ChickWizz
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Tasty Sides
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Sweets, Treats and Beverages
+                                Competitions and Events
                             </a>
                         </div>
                     )}
@@ -245,45 +215,39 @@ const NavBar = () => {
                         <div className="absolute bg-gray-300 py-2 w-fit shadow-lg text-xs">
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
-                                Everyday Affordable Value Meals
+                                About Us
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
-                                Fried Chicken
+                                Brand Story
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
-                                Flamed Grilled Chicken
+                                Our People
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
-                                Rotisserie Chicken
+                                Social Responsibility
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
-                                Burger, Wraps & ChickWizz
+                                Become a Franchisee
                             </a>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                                className="block px-4 py-2 text-gray-800 hover:text-red-600"
                             >
-                                Tasty Sides
-                            </a>
-                            <a
-                                href="#"
-                                className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                            >
-                                Sweets, Treats and Beverages
+                                Work with Us
                             </a>
                         </div>
                     )}
@@ -312,7 +276,7 @@ const NavBar = () => {
                 </ul>
             </div>
 
-                {/* set nav bar */}
+                {/* set nav bar for sm screens */}
             <div onClick={() => setNav(!nav)} className='cursor-pointer pr-4 z-10 text-yellow-500 md:hidden'>
                 {nav ? <FaTimes size={30} /> : <FaBars size={30} />} 
             </div>  
